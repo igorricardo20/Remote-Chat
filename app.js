@@ -33,6 +33,12 @@ app.use('/users', users);
 app.use(erros.notfound);
 app.use(erros.serverError);
 
-app.listen(3000, function() {
-    console.log('Servidor funcionando na porta 3000');
+
+
+var port = process.env.PORT || 5000;
+
+app.listen(port, function() {
+    console.log('Express server listening on port '+port);
+
+    
 });
